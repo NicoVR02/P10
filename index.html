@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Modular System</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  :root {
+    --color-a: #a6ff00;
+    --color-b: #d000ff;
+  }
+
+  .container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+  }
+
+  .left {
+    width: 35%;
+    background: var(--color-a);
+    color: white;
+    padding: 40px;
+  }
+
+  .left h1 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    hyphens: auto;
+  }
+
+  .left h3 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    hyphens: auto;
+  }
+
+  .left nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .left nav h2 {
+    font-size: 2em;
+    font-weight: 600;
+    hyphens: auto;
+  }
+
+  .left nav h2 a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    hyphens: auto;
+  }
+
+  .right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sector {
+    position: relative;
+    height: 50%;
+    background: var(--color-b);
+    overflow: hidden;
+  }
+
+  .shape {
+    position: absolute;
+    background: var(--color-a);
+  }
+
+  .sq-center {
+    width: 25%;
+    height: 25%;
+    top: 37.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rect-h {
+    width: 70%;
+    height: 10%;
+    left: 15%;
+  }
+
+  .r1 { top: 20%; }
+  .r2 { bottom: 20%; }
+
+  .rect-v {
+    width: 10%;
+    height: 70%;
+    top: 15%;
+  }
+
+  .v1 { left: 20%; }
+  .v2 { right: 20%; }
+
+  .sq {
+    width: 12%;
+    height: 12%;
+  }
+
+  .s1 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .s2 {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .corner-big {
+    width: 28%;
+    height: 28%;
+  }
+
+  .tl { top: 4%; left: 4%; }
+  .tr { top: 4%; right: 4%; }
+  .bl { bottom: 4%; left: 4%; }
+  .br { bottom: 4%; right: 4%; }
+
+  .frame-v {
+    width: 6%;
+    height: 70%;
+    top: 15%;
+  }
+
+  .frame-left { left: 40%; }
+  .frame-right { right: 40%; }
+
+  .mid-rect {
+    width: 36%;
+    height: 10%;
+  }
+
+  .mid-top {
+    top: 22%;
+    left: 32%;
+  }
+
+  .mid-bottom {
+    bottom: 22%;
+    left: 32%;
+  }
+
+  .core-large {
+    width: 24%;
+    height: 24%;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .core-small {
+    width: 14%;
+    height: 14%;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .right {
+      height: 100vh;
+    }
+
+    .sector {
+      height: 50vh;
+    }
+
+    .left h1 {
+      font-size: 3em;
+    }
+
+    .left nav h2 {
+      font-size: 1.6em;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <aside class="left">
+    <h1>PORT&shy;FOLIO</h1>
+    <h3>Nicolás Vidal Rico</h3>
+
+    <nav>
+      <h2><a href="https://nicovr02.github.io/P1/">P1</a></h2>
+      <h2><a href="https://nicovr02.github.io/P2/">P2</a></h2>
+      <h2><a href="https://nicovr02.github.io/P3/">P3</a></h2>
+      <h2><a href="https://nicovr02.github.io/P5/">P5</a></h2>
+      <h2><a href="https://nicovr02.github.io/P6/">P6</a></h2>
+      <h2><a href="https://nicovr02.github.io/P7/">P7</a></h2>
+      <h2><a href="https://nicovr02.github.io/P8/">P8</a></h2>
+      <h2><a href="https://nicovr02.github.io/P9/">P9a</a></h2>
+      <h2><a href="https://nicovr02.github.io/P9.2/">P9b</a></h2>
+    </nav>
+  </aside>
+
+  <section class="right">
+
+    <div class="sector">
+      <div class="shape sq-center"></div>
+      <div class="shape rect-h r1"></div>
+      <div class="shape rect-h r2"></div>
+      <div class="shape rect-v v1"></div>
+      <div class="shape rect-v v2"></div>
+      <div class="shape sq s1"></div>
+      <div class="shape sq s2"></div>
+    </div>
+
+    <div class="sector">
+      <div class="shape corner-big tl"></div>
+      <div class="shape corner-big tr"></div>
+      <div class="shape corner-big bl"></div>
+      <div class="shape corner-big br"></div>
+
+      <div class="shape frame-v frame-left"></div>
+      <div class="shape frame-v frame-right"></div>
+
+      <div class="shape mid-rect mid-top"></div>
+      <div class="shape mid-rect mid-bottom"></div>
+
+      <div class="shape core-large"></div>
+      <div class="shape core-small"></div>
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>
